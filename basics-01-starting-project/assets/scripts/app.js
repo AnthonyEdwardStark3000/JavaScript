@@ -30,55 +30,84 @@ function objectLog(operationPerformed, previousVal, currentVal, userInput){
     console.log(logEntry.operation); //Accessing a particular value from an object.
 }
 
+function calculateResult(calculationType){
+    const userInput = getUserInputasNumber();
+    const initialValue = currentValue;
+    let MathOperator;
+    if(calculationType === 'add')
+    {
+    currentValue += userInput;
+    MathOperator = "+"; 
+}
+else if(calculationType === 'sub'){
+    currentValue -= userInput;
+    MathOperator = "-"; 
+}
+else if(calculationType === 'mul'){
+    currentValue *= userInput;
+    MathOperator = "*"; 
+}
+else {
+    currentValue /= userInput;
+    MathOperator = "/"; 
+}
+    createResultLog(MathOperator, initialValue, userInput);      
+    objectLog(calculationType, initialValue, currentValue, userInput);    
+}
+
 
 function add(){
-    const userInput = getUserInputasNumber();
-    // const calculationDescription = `${currentValue} + ${userInput}`;
-    // console.log(calculationDescription);
-    const initialValue = currentValue;
-    // currentValue = currentValue + userInput ;
-    currentValue += userInput ;
-    createResultLog('+',initialValue, userInput);
-    // outputResult(currentValue ,calculationDescription);
+    // const userInput = getUserInputasNumber();
+    // // const calculationDescription = `${currentValue} + ${userInput}`;
+    // // console.log(calculationDescription);
+    // const initialValue = currentValue;
+    // // currentValue = currentValue + userInput ;
+    // currentValue += userInput ;
+    // createResultLog('+',initialValue, userInput);
+    // // outputResult(currentValue ,calculationDescription);
     
-    // //Objects
-    // const logEntry = {
-    //     operation: "Addition",
-    //     initialVal: initialValue,
-    //     numberEntered: userInput,
-    //     finalVal: currentValue
-    // };
+    // // //Objects
+    // // const logEntry = {
+    // //     operation: "Addition",
+    // //     initialVal: initialValue,
+    // //     numberEntered: userInput,
+    // //     finalVal: currentValue
+    // // };
 
-    // // logEntries.push(userInput);//Arrays
-    // logEntries.push(logEntry); 
-    // console.log(logEntries);
-    // console.log(logEntry.operation); //Accessing a particular value from an object.
-    objectLog('Addition', initialValue, currentValue, userInput);
+    // // // logEntries.push(userInput);//Arrays
+    // // logEntries.push(logEntry); 
+    // // console.log(logEntries);
+    // // console.log(logEntry.operation); //Accessing a particular value from an object.
+    // objectLog('Addition', initialValue, currentValue, userInput);
+    calculateResult("add");
 };
 
 function subtract(){
-    const userInput = getUserInputasNumber();
-    const initialValue = currentValue;
-    currentValue -= userInput;
-    createResultLog('-', initialValue, userInput);      
-    objectLog('Subtraction', initialValue, currentValue, userInput);
+    // const userInput = getUserInputasNumber();
+    // const initialValue = currentValue;
+    // currentValue -= userInput;
+    // createResultLog('-', initialValue, userInput);      
+    // objectLog('Subtraction', initialValue, currentValue, userInput);
+    calculateResult('sub');
 };
 
 function divide(){
-    const userInput = getUserInputasNumber();
-    const initialValue = currentValue;
-    currentValue /= userInput;
-    createResultLog('/', initialValue, userInput); 
-    objectLog('Division', initialValue, currentValue, userInput);     
+    // const userInput = getUserInputasNumber();
+    // const initialValue = currentValue;
+    // currentValue /= userInput;
+    // createResultLog('/', initialValue, userInput); 
+    // objectLog('Division', initialValue, currentValue, userInput);     
+    calculateResult('div');
     
 };
 
 function multiply (){
-    const userInput = getUserInputasNumber();
-    const initialValue = currentValue;
-    currentValue *= userInput;
-    createResultLog('*', initialValue, userInput);   
-    objectLog('Multiplication', initialValue, currentValue, userInput);   
+    // const userInput = getUserInputasNumber();
+    // const initialValue = currentValue;
+    // currentValue *= userInput;
+    // createResultLog('*', initialValue, userInput);   
+    // objectLog('Multiplication', initialValue, currentValue, userInput);   
+    calculateResult('mul');
     
 };
 
