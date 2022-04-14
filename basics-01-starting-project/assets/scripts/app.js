@@ -32,6 +32,15 @@ function objectLog(operationPerformed, previousVal, currentVal, userInput){
 
 function calculateResult(calculationType){
     const userInput = getUserInputasNumber();
+    if(
+        calculationType !== 'add' &&
+        calculationType !== 'sub' &&
+        calculationType !== 'mul' &&
+        calculationType !== 'div' ||
+        !userInput        
+        ){
+        return;
+    }
     const initialValue = currentValue;
     let MathOperator;
     if(calculationType === 'add')
