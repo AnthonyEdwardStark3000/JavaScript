@@ -14,9 +14,12 @@ const monsterAttack = 'Monster';
 const gameOver = 'gameOver';
 
 let maximumLife = enteredValue;
+// let maximumLife;
 if(isNaN(maximumLife) || maximumLife<=0){
-    maximumLife = 100;
-};
+    // maximumLife = 100;
+    throw {message: "Invalid Input , it\'s not a number."};
+}
+
 let current_monsterHealth = maximumLife; 
 let current_playerHealth = maximumLife; 
 let has_additionalLife = true;
@@ -167,6 +170,9 @@ function healUser(){
 function printLog(){
     for(let i=0; i<=battleLog.length;i++){
         console.log(battleLog[i]);
+    }
+    for(const logEnter of battleLog){
+        console.log(logEnter);
     }
 };
 
