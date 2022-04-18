@@ -180,3 +180,12 @@ attackBtn.addEventListener('click', handleAttack);
 strongAttackBtn.addEventListener('click', handleHeavyAttack);
 healBtn.addEventListener('click', healUser);
 logBtn.addEventListener('click',printLog)
+
+//variable creations
+// var, let, const
+//var, let allow changing the variable value
+//const dont allow changing
+
+// var -> available from the beginning , have function scope
+// let -> ever since es6 , have block scope
+// const -> ever since es6 , have block scope
