@@ -42,7 +42,7 @@ const getPlayerChoice = function(){
     // const add = (a, b)=> a+b;
     // If there is only one argument then even the () can be omitted
     // const add = a=> a+10;
-const decideWinner = (player, comp)=>{
+const decideWinner = (player = DefaultUserChoice, comp)=>{
     return player == comp ? "Draw":
         player == Rock && comp == Scissors ||
         player == Scissors && comp == Paper ||
@@ -77,4 +77,50 @@ GameStartButton.addEventListener('click', function(){
     const systemSelection = getComputerChoice();
     const finalResult = decideWinner(playerSelection, systemSelection);
     console.log(`Player chose ${playerSelection} and the computer chose ${systemSelection} and so it's an ${finalResult}`);
+    alert(`You chose ${playerSelection} and the computer chose ${systemSelection} and so it's an ${finalResult}`);
+    isGameRunning = false;
 });
+
+//Using functions with flexible arguments.
+//Approach number1
+function sumCheck(number1){
+    let result = 0;
+    for(const num of number1){
+        result+=num;
+    }
+    return result;
+}
+
+console.log(sumCheck([1,2,7]));
+console.log(sumCheck([1,2,7,5,3,0,4,-2]));
+
+//Approach number2
+function mulCheck(...number1){ // ...Rest operator should always be the last element (...number1, number2) will show an error. 
+    let result = 1;
+    for(const num of number1){
+        result = result*num;
+        if(result == -0)
+        {
+            return 0;
+        }
+    }
+    return result;
+}
+
+console.log(mulCheck(1,2,7));
+console.log(mulCheck(1,2,7,5,3,4,-2));
+
+//Functions inside an function.
+function addition(a, b){
+    let answer = (numbers)=>{
+        return numbers+10;
+    } 
+    let resuld = 0;
+    resuld += answer(a);
+    resuld = resuld+ a + b;
+    return resuld;
+}
+
+console.log(addition(5,5));
+
+//Callback functions
