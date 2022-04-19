@@ -38,7 +38,7 @@ function checkVar(){
 console.log(userName); // will result in an undefined instead of getting an error
 var userName = "Mr.Incognito";
 /**bcz compiler does hoisting
- * var userName; and defines an initial value of undefined.
+ * var userName; and defines an initial value of undefined
  * console.log(userName);
  * userName = 'Mr.Incognito';
  * 
