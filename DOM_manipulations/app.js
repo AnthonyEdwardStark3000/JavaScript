@@ -17,3 +17,8 @@ const allLists = document.getElementsByTagName('li');
 for(let el of allLists){
     console.dir(el);
 }
+
+//Selecting siblings
+const unorderedList = document.body.firstElementChild.nextElementSibling;
+const first_element_child =  unorderedList.firstElementChild;
+console.log(first_element_child);
