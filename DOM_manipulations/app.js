@@ -19,6 +19,31 @@ for(let el of allLists){
 }
 
 //Selecting siblings
-const unorderedList = document.body.firstElementChild.nextElementSibling;
-const first_element_child =  unorderedList.firstElementChild;
-console.log(first_element_child);
+// Might sometimes be a bit messy one as if we add some sections we may be changing the child order
+// const unorderedList = document.body.firstElementChild.nextElementSibling;
+// const first_element_child =  unorderedList.firstElementChild;
+// console.log(first_element_child);
+
+//styling with dom
+const section = document.querySelector('section');
+console.log(section);
+section.style.backgroundColor = 'violet';
+
+const h3Element = document.querySelector('h3');
+console.log(h3Element);
+h3Element.className = 'bg-red';
+
+const button = document.querySelector('button');
+button.addEventListener('click', ()=>{
+  
+    // if(section.className === 'bg-red visible'){
+    //     section.className = 'bg-red invisible'    
+    // } else {
+    //     section.className = 'bg-red visible'    
+    // }
+    section.className = 'bg-red visible';
+    
+    section.classList.toggle('visible');
+    section.classList.toggle('invisible');
+
+});
