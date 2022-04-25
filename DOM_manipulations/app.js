@@ -46,4 +46,8 @@ button.addEventListener('click', ()=>{
     section.classList.toggle('visible');
     section.classList.toggle('invisible');
 
+    section.innerHTML = '<h5>ALtered the html structure itself</h4>';
+    // Adding new element to the existing elements
+    const lists = document.querySelector('li');
+    lists.innerHTML = lists.innerHTML+'<li>New element added with the tag</li>'
 });
