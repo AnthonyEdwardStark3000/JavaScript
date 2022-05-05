@@ -34,7 +34,7 @@ const RenderNewMovieElement = function(id, title, imageURL, rating){
   listRoot.append(newMovieElement);
 }
 
-const toggleMovieModal = function(){
+const AddMovieModal = function(){
   addMovieModal.classList.toggle('visible');
   toggleBackdrop();
 };
@@ -43,12 +43,16 @@ const toggleBackdrop = function(){
   BackDrop.classList.toggle('visible');
 };
 
+const closeMovieModal = function(){
+  addMovieModal.classList.remove('visible');
+}
+
 const BackDropDismiss = function(){
-  toggleMovieModal();
+  closeMovieModal();
 }
 
 const DismissModalOnCancel = function(){
-  toggleMovieModal();
+  closeMovieModal();
   ClearMovieInputs();
 }
 
@@ -58,7 +62,7 @@ const ClearMovieInputs = function(){
   }
 }
 
-const DeleteMovieHandler = function(movieId){
+const DeleteMovie = movieId =>{
   let movieIndex = 0;
   for(let i in movies){
     if(movieId == i.id){
@@ -68,7 +72,14 @@ const DeleteMovieHandler = function(movieId){
   }
   movies.splice(movieIndex, 1);
   const listRoot = document.getElementById('movie-list');
-  listRoot.children[movieIndex];
+  listRoot.children[movieIndex].remove();
+}
+
+const DeleteMovieHandler = function(movieId){
+  const deleteMovieModal = document.getElementById('delete-modal');
+  deleteMovieModal.classList.add('visible');
+  toggleBackdrop();
+  // DeleteMovie();
 }
 
 const AddMovieHandler = function(){
@@ -88,13 +99,13 @@ const AddMovieHandler = function(){
   }
 
   movies.push(newMovie);
-  toggleMovieModal();
+  closeMovieModal();
   ClearMovieInputs();
   RenderNewMovieElement(newMovie.id, newMovie.title, newMovie.image, newMovie.rating);
   UpdateUI();
 }
 
-StartAddMovieButton.addEventListener('click',toggleMovieModal);
+StartAddMovieButton.addEventListener('click',AddMovieModal);
 BackDrop.addEventListener('click', BackDropDismiss);
 CancelMovieModalButton.addEventListener('click',DismissModalOnCancel);
 AddMovieModalButton.addEventListener('click', AddMovieHandler);
