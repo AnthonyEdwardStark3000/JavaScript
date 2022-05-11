@@ -74,3 +74,15 @@ console.log('Using Splice to delete Everything');
 const splicedElements = languages.splice(0); //returns removed elements
 console.log(languages);
 console.log('Values returned by splice function: '+splicedElements);
+
+//How does values affect
+const testval=[1,2,5];
+const newtest = testval;
+testval.push(100);
+console.log(newtest, testval);
+
+//Slice Ranges
+const testResults = [1, 7.5,-2,10.57];
+console.log('using slice():');
+console.log(testResults.slice());
+console.log('Selecting first four elements using slice:\t'+testResults.slice(0,3));
