@@ -86,3 +86,16 @@ const testResults = [1, 7.5,-2,10.57];
 console.log('using slice():');
 console.log(testResults.slice());
 console.log('Selecting first four elements using slice:\t'+testResults.slice(0,3));
+console.log('Add element to the array and return a new array');
+const storedResults = testResults.concat([28]);
+console.log(storedResults);
+
+//Retriving
+//works with primitive values and issue with reference values
+console.log('Retrieving using indexof :');
+console.log(storedResults.indexOf(7.5)); //starts from left and stops at the found of first occurence of the match
+console.log(storedResults.lastIndexOf(7.5)); //starts from the right
+//Reference value check
+const personData = [{name: 'stark'},{name: 'Edward'}];
+console.log('Value of reference data array :');
+console.log(personData.indexOf({name:'stark'}));
