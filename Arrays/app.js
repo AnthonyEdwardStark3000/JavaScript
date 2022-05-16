@@ -90,7 +90,7 @@ console.log('Add element to the array and return a new array');
 const storedResults = testResults.concat([28]);
 console.log(storedResults);
 
-//Retriving
+//Retrieving
 //works with primitive values and issue with reference values
 console.log('Retrieving using indexof :');
 console.log(storedResults.indexOf(7.5)); //starts from left and stops at the found of first occurence of the match
@@ -99,3 +99,19 @@ console.log(storedResults.lastIndexOf(7.5)); //starts from the right
 const personData = [{name: 'stark'},{name: 'Edward'}];
 console.log('Value of reference data array :');
 console.log(personData.indexOf({name:'stark'}));
+
+//Another method to find the index.
+const mr_stark = personData.find((person, index, personData)=>{
+    return person.name === 'stark';
+});
+console.log('Find() in Javascript');
+console.log(mr_stark);
+mr_stark.name = 'Stark';
+console.log('Manipulating the value');
+console.log(mr_stark, personData);
+//Finding the index with findIndex()
+const stark_Index = personData.findIndex((person, index, personData)=>{
+    return person.name === 'Edward';
+});
+console.log('Found index using the findIndex is:');
+console.log(stark_Index);
