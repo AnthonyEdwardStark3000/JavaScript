@@ -115,3 +115,27 @@ const stark_Index = personData.findIndex((person, index, personData)=>{
 });
 console.log('Found index using the findIndex is:');
 console.log(stark_Index);
+
+//Check the element in array with includes
+console.log('Powerful includes method in Javascript\nChecking for the presence of Hello in the Array');
+console.log(personData.includes('hello'));
+
+//For loop
+const prices =[10,20,50,100];
+const tax = 0.19;
+const adjustedTax = [];
+
+// for(const price of prices){
+//     adjustedTax.push(price * (1+tax));
+// }
+
+prices.forEach((price,idx,prices)=>{
+    const priceObject = {
+        index: idx,
+        newPrice: price * (1+tax)
+    }
+    adjustedTax.push(priceObject);
+});
+
+console.log('Finally tax adjusted with the prices Array:');
+console.log(adjustedTax);
