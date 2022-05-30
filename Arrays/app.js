@@ -137,5 +137,15 @@ prices.forEach((price,idx,prices)=>{
     adjustedTax.push(priceObject);
 });
 
+prices.map((price,idx,prices)=>{
+    const priceObject = {
+        index: idx,
+        newPrice: price * (1+tax)
+    }
+    adjustedTax.push(priceObject);
+});
+
 console.log('Finally tax adjusted with the prices Array:');
 console.log(adjustedTax);
+//console.log("check the function");
+//console.log("check the console");
