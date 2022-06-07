@@ -26,3 +26,24 @@ ids.delete("Check");
 for(const entry of ids.values()){
     console.log(entry);
 }
+
+//Maps
+//Purpose of Maps is to attach additional information to an object property but not merge information to the object
+
+const person1 = {name: "Stark"};
+const person2 = {name: "Anthony"};
+const personMapData = new Map([[person1, [{skills: "C, C++, Java, Python, DataStructures", value: 3}]]]);
+console.log("Person1 Data:");
+console.log(person1);
+console.log("Person Data with Map");
+console.log(personMapData);
+console.log("Adding value to another variable using the map value created");
+personMapData.set(person2, [{skills: "Python", value: 7}]);
+console.log("Person2 Data:");
+console.log(person2);
+
+//using entries function to go-through the map
+console.log("using entries function to go-through the map");
+for(const entry of personMapData.entries()){
+    console.log(entry);
+}
