@@ -62,3 +62,6 @@ const searchMovieHandler = ()=>{
 
 addMovieBtn.addEventListener('click', addMovieHandler);
 SearchBtn.addEventListener('click', searchMovieHandler);
+
+//console.log('check the application');
+//console.log('filter operation done');
