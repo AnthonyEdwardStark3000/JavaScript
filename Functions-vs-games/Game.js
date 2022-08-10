@@ -124,3 +124,17 @@ function addition(a, b){
 console.log(addition(5,5));
 
 //Callback functions
+function callBack(resultHandler,...num){
+    function validateNumber(number){
+        return isNaN(number)? 0 :number;
+    };
+    let sum =0;
+    for(const n of num){
+        sum+= validateNumber(n);
+    }
+    resultHandler(sum);
+}
+function showResult(N){
+    console.log(`The final Result after adding all the numbers is : ${N}`);
+}
+callBack(showResult,1,3,5,6,8);

@@ -48,6 +48,6 @@ button.addEventListener('click', ()=>{
 
     section.innerHTML = '<h5>ALtered the html structure itself</h4>';
     // Adding new element to the existing elements
-    const lists = document.querySelector('li');
-    lists.innerHTML = lists.innerHTML+'<li>New element added with the tag</li>'
+    const uls= document.querySelector('ul');
+    uls.innerHTML = uls.innerHTML + '<li>Final one element to check</li>'
 });

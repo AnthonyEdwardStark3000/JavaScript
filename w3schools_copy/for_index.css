@@ -1,0 +1,104 @@
+.head
+{
+    background-color: #79ACD9;
+}
+ul li
+{
+    display: inline;
+    padding-left: 20px;
+}
+.container2
+{
+    background-color: #1a1a1a;
+    color:white;
+    padding-left: 25px;
+    margin: 2px 5px 5px 2px;
+}
+ul li
+{
+    color:white;
+}
+button
+{
+    padding-top: 3px;
+    background-color:#1a1a1a;
+    color:white;
+}
+.container3 
+{
+    background-color: #A9B9D9;
+    color:white;
+    padding-left: 25px;
+    margin: 2px 5px 5px 2px;
+}
+.col2
+{
+    background-color: #F2A7A7;
+}
+#left
+{
+    background-color:rgb(255, 47, 89);
+   width: 35px;
+    float:left;
+}
+#right
+{
+    width: 65%;
+    float:right;
+   background-color:#7D6B7D;
+}
+#container3
+{
+    margin-top: 30px;
+    background-color: #79ACD9;
+    border-radius: 12px;
+}
+#inner
+{
+    background-color: white;
+    color: black;
+}
+#custom_container
+{
+    background-color: #FF8C64;
+}
+#second_custom
+{
+    background-color: #FFF587;
+    border-radius: 12px;
+}
+#for_variable
+{
+    background-color: #A3A1A8;
+    border-radius: 12px;
+    border-color: #F2A7A7;
+    border-style: solid;
+}
+input
+{
+    border-radius: 12px;
+    padding-left: 10px;
+    background-color: #FF8C64;
+}
+#button
+{
+   
+    margin-left: 20px;
+    border-radius: 12px;
+    border-left: violet;
+}
+#result
+{
+    color: green;
+}
+#result2
+{
+background-color: orange;
+color: red;
+}
+#next_button
+{
+    position: absolute;
+    right:100px;
+   border-radius: 12px;
+}

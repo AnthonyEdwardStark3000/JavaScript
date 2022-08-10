@@ -1,0 +1,14 @@
+body
+{
+    background-color: #F2A413;
+  
+}
+.container-fluid
+{
+    /* background-color: #A6A198; */
+    color: rgb(0, 0, 0);
+}
+.button
+{
+    border-radius: 16px;
+}
