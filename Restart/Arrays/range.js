@@ -23,7 +23,7 @@ console.log('The index of stark is :'+starkIndex);
 
 console.log(check.includes(3000));
 
-const prices = [10,20,45,90];
+const prices = [10.99,5.99,3.99,6.59];
 const tax = 0.9;
 const priceWithTax = [];
 
@@ -54,3 +54,43 @@ const FilteredArray = prices.filter((price, index, prices)=>{
     return price > 10;
 });
 console.log(FilteredArray);
+
+// let sum = 0;
+
+// prices.forEach((price)=>{
+//     sum += price;
+// });
+
+// console.log(sum);
+
+const sum = prices.reduce((prevValue, currentValue, currentIndex, prices)=>{
+    return prevValue + currentValue;
+},0);
+
+console.log(sum);
+
+const splitWord = 'Check;your;brain';
+const newWord = splitWord.split(';');
+
+console.log(newWord);
+
+const singleWord = newWord.join(' ');
+console.log(singleWord);
+
+const copiedArray = [...newWord];
+newWord.push('sample text');
+console.log(newWord, copiedArray);
+
+const persons = [{name:'a',age:21},{name:'b',age:21},{name:'c',age:20}];
+const copiedPersons = [...persons];
+persons.push({name:'d',age:23});
+persons[0].age=100;
+console.log(persons,copiedPersons);     
+
+const myName = ['Suresh', 'Babu', 'Male', 22];
+const fn = myName[0];
+const ln = myName[1];
+
+const [firstName, lastName, ...restInformation] = myName;
+console.log(firstName+":"+lastName);
+console.log(restInformation);
