@@ -76,7 +76,7 @@ class ProjectItem {
     const projectElement = document.getElementById(this.id);
     console.log(projectElement.dataset);
     const tooltipText = projectElement.dataset.extraInfo;
-
+    
     const tooltip = new Tooltip(() => {
       this.hasActiveTooltip = false;
     }, tooltipText);
